@@ -1,0 +1,27 @@
+<div class="headerBackground">
+	<h1 class="header"> This is the index page </h1>
+</div>
+<% if flash[:notice]%>
+<div class = "notice"> <%= flash[:notice] %> </div>
+<%end%>
+
+<table id="bookTable">
+	<tr>
+		<th> Book Title</th>
+		<th> Book Author</th>
+		<th> Number Of Pages</th>
+		<th> ISBN</th>
+	</tr>
+	<tr>
+		<% @books.each do |book|%>
+	</tr>
+	<tr>
+		<td> <%= link_to book.title, book_url(book), :method => 'get' %> </td>
+		<td> <%=book.author%> </td>
+		<td> <%=book.no_of_pages%> </td>
+		<td> <%= book.isbn %> </td>
+	</tr>
+	<% end%>
+</table>
+
+<%= button_to "new",new_book_url, :method  => "get"%>

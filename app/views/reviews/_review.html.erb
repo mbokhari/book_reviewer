@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%= review.name %>
+</p>
+ 
+<p>
+  <b>Review:</b>
+  <%= review.body %>
+</p>
+
+<%= link_to 'Destroy Comment', [review.book, review],
+               :confirm => 'Are you sure?',
+               :method => :delete %>

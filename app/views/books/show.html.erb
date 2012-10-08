@@ -1,0 +1,17 @@
+<div class = "headerBackground">
+<h1 class = "header">Show Book</h1>
+</div>
+
+<div> title: <%= @book.title%> </div>
+<div> author: <%= @book.author%>  </div>
+<div> no of pages: <%= @book.no_of_pages%> </div>
+<div> ISBN: <%= @book.isbn%> </div>
+
+<%= button_to "edit",edit_book_url, :method  => "get"%>
+<%= button_to "delete", @book, :method  => "delete"%>
+
+<h2>Reviews</h2>
+<%= render @book.reviews %>
+ 
+<h2>Add a review:</h2>
+<%= render "reviews/form"%>
