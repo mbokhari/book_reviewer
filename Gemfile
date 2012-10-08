@@ -8,6 +8,8 @@ gem 'omniauth'
 
 gem 'omniauth-twitter'
 
+gem 'omniauth-facebook'
+
 gem "heroku"
 
 # Bundle edge Rails instead:
