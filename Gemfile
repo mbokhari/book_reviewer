@@ -6,6 +6,8 @@ gem 'rails', '3.2.8'
 
 gem 'omniauth'
 
+gem 'omniauth-twitter'
+
 gem "heroku"
 
 # Bundle edge Rails instead:
