@@ -4,4 +4,6 @@ class Review < ActiveRecord::Base
   attr_accessible :name, :date, :body
   
   validates :name, :body, :presence  => true
+  
+  
 end
