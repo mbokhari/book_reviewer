@@ -2,13 +2,21 @@
 	<h1 class ="header">New Books</h1>
 </div>
 <%= form_for @book do |f|%>
-	<%= f.label :title %>
-	<%= f.text_field :title %>
-	<%= f.label :author %>
-	<%= f.text_field :author %>
-	<%= f.label :no_of_pages %>
-	<%= f.text_field :no_of_pages %>
-	<%= f.label :isbn %>
-	<%= f.text_field :isbn %>
+	<div class="textfield">
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</div>
+	<div class="textfield">
+		<%= f.label :author %>
+		<%= f.text_field :author %>
+	</div>	
+	<div class="textfield">	
+		<%= f.label :no_of_pages %>
+		<%= f.text_field :no_of_pages %>
+	</div>	
+	<div class="textfield">	
+		<%= f.label :isbn %>
+		<%= f.text_field :isbn %>
+	</div>
 	<%= f.submit%>
 <%end%>

@@ -3,13 +3,21 @@
 </div>
 
 <%= form_for @book do |f|%>
+<div class="textfield">
 	<%= f.label :title %>
 	<%= f.text_field :title %>
+</div>
+<div class="textfield">
 	<%= f.label :author %>
 	<%= f.text_field :author %>
+</div>	
+<div class="textfield">	
 	<%= f.label :no_of_pages %>
 	<%= f.text_field :no_of_pages %>
+</div>	
+<div class="textfield">	
 	<%= f.label :isbn %>
 	<%= f.text_field :isbn %>
+</div>
 	<%= f.submit%>
 <%end%>
