@@ -1,7 +1,8 @@
-<div class = "headerBackground">
-<h1 class = "header">Show Book</h1>
+<div class = "header">
+<h1>Show Book</h1>
 </div>
 
+<div class="right">
 <div> title: <%= @book.title%> </div>
 <div> author: <%= @book.author%>  </div>
 <div> no of pages: <%= @book.no_of_pages%> </div>
@@ -15,3 +16,4 @@
  
 <h2>Add a review:</h2>
 <%= render "reviews/form"%>
+</div>
