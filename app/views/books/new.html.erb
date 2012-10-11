@@ -6,27 +6,29 @@
   <% @book.errors.full_messages.each do |message| %>
     <li class="validation_errors"><%= message %></li>
   <% end %>
-
 <% end %>
-<%= form_for @book do |f|%>
-	<div class="textfield">
-		<%= f.label :title %>
-		<%= f.text_field :title %>
-	</div>
-	<div class="textfield">
-		<%= f.label :author %>
-		<%= f.text_field :author %>
-	</div>	
-	<div class="textfield">	
-		<%= f.label :no_of_pages %>
-		<%= f.text_field :no_of_pages %>
-	</div>	
-	<div class="textfield">	
-		<%= f.label :isbn %>
-		<%= f.text_field :isbn %>
-	</div>
-	<div>
-	<%= f.submit%>
-	</div>
-<%end%>
+
+<div class="form">
+	<%= form_for @book do |f|%>
+		<div class="field">
+			<%= f.label :title %>
+			<span class="textField"> <%= f.text_field :title %> </span>
+		</div>
+		<div class="field">
+			<%= f.label :author %>
+			<span class="textField"> <%= f.text_field :author %> </span>
+		</div>	
+		<div class="field">	
+			<%= f.label :no_of_pages %>
+			<span class="textField"> <%= f.text_field :no_of_pages %> </span>
+		</div>	
+		<div class="field">	
+			<%= f.label :isbn %>
+			<span class="textField"> <%= f.text_field :isbn %> </span>
+		</div>
+		<div>
+		<%= f.submit%>
+		</div>
+	<%end%>
+</div>
 </div>
