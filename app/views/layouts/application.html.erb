@@ -20,6 +20,11 @@
 	<% else %>
 		<%= link_to "Sign in with Twitter", "/auth/twitter" %>
 	<% end %>
+	<p>  
+	  <strong>Don&rsquo;t use twitter?</strong>  
+	  <%= link_to "Create an account", "/auth/identity/register" %> or  
+	  <%= link_to "login", "/auth/identity" %> with a password.  
+	</p>
 	<div><%= link_to "Home", root_path %> </div>
 </div>
 

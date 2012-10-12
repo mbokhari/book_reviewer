@@ -8,6 +8,11 @@ gem 'omniauth'
 
 gem 'omniauth-twitter'
 
+gem 'omniauth-identity'
+
+# To use ActiveModel has_secure_password  
+gem 'bcrypt-ruby', '~> 3.0.0'
+
 gem "heroku"
 
 # Bundle edge Rails instead:
