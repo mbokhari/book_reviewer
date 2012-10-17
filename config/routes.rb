@@ -1,17 +1,21 @@
 BookReviewer::Application.routes.draw do
   
+  get "users/new"
+
+  get "sessions/new"
+
   root :to  => 'books#index'
   resources :books do
     resources :reviews
   end
   
-  match "/auth/:provider/callback" => "sessions#create"
-  match "/signout" => "sessions#destroy", :as => :signout
+  resources :sessions
+  resources :users
   
-  match "/auth/:provider/callback" => "sessions#create"
-  match "/signout" => "sessions#destroy", :as => :signout
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "sessions#new", :as => "login"
+  get "signup" => "users#new", :as => "signup"
   
-  match "/auth/failure"  => "sessions#failure"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

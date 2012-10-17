@@ -6,12 +6,9 @@ gem 'rails', '3.2.8'
 
 gem 'omniauth'
 
+gem 'sorcery'
+
 gem 'omniauth-twitter'
-
-gem 'omniauth-identity'
-
-# To use ActiveModel has_secure_password  
-gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem "heroku"
 

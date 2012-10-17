@@ -1,12 +1,9 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :provider, :uid
-  
-  def self.create_with_omniauth(auth)
-    create! do |user|
-      user.provider = auth["provider"]
-      user.uid = auth["uid"]
-      user.name = auth["info"]["name"]
-    end
-  end
-  
+  authenticates_with_sorcery!
+  attr_accessible :username, :email, :password, :password_confirmation
+
+  validates_confirmation_of :password
+  validates_presence_of :password, :on => :create
+  validates_presence_of :email, :username
+  validates_uniqueness_of :email, :username
 end
