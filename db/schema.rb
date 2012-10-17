@@ -11,21 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121011142201) do
+ActiveRecord::Schema.define(:version => 20121009142636) do
 
   create_table "books", :force => true do |t|
     t.string  "title"
     t.string  "author"
     t.integer "no_of_pages"
     t.integer "isbn",        :default => 0
-  end
-
-  create_table "identities", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
   end
 
   create_table "reviews", :force => true do |t|
