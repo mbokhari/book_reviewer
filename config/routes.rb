@@ -5,8 +5,6 @@ BookReviewer::Application.routes.draw do
     resources :reviews
   end
   
-  resources :identities
-  
   match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
   

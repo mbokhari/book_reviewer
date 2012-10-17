@@ -20,25 +20,11 @@
 	<% else %>
 		<%= link_to "Sign in with Twitter", "/auth/twitter" %>
 	<% end %>
-	<p>  
-	  <strong>Don&rsquo;t use twitter?</strong>  
-	  <%= link_to "Create an account", new_identity_path %> or login below. 
-	</p>
-	
-	<%= form_tag "/auth/identity/callback" do %>  
-	  <div class="field">  
-	    <%= label_tag :auth_key, "Email" %><br>  
-	    <%= text_field_tag :auth_key %>  
-	  </div>  
-	  <div class="field">  
-	    <%= label_tag :password %><br>  
-	    <%= password_field_tag :password %>  
-	  </div>  
-	  <div class="actions"><%= submit_tag "Login" %></div>  
-	<% end %>
 	
 	<div><%= link_to "Home", root_path %> </div>
 </div>
+
+	<audio src="/sounds/sonic_boss.mp3" autoplay="true" hidden="true">
 
 </body>
 </html>
