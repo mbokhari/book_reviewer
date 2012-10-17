@@ -4,11 +4,7 @@ ruby "1.9.3"
 
 gem 'rails', '3.2.8'
 
-gem 'omniauth'
-
 gem 'sorcery'
-
-gem 'omniauth-twitter'
 
 gem "heroku"
 
