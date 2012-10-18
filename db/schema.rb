@@ -11,15 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121017112827) do
-
-  create_table "authentications", :force => true do |t|
-    t.integer  "user_id",    :null => false
-    t.string   "provider",   :null => false
-    t.string   "uid",        :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20121004232956) do
 
   create_table "books", :force => true do |t|
     t.string  "title"
@@ -36,18 +28,5 @@ ActiveRecord::Schema.define(:version => 20121017112827) do
   end
 
   add_index "reviews", ["book_id"], :name => "index_reviews_on_book_id"
-
-  create_table "users", :force => true do |t|
-    t.string   "username",                     :null => false
-    t.string   "email"
-    t.string   "crypted_password"
-    t.string   "salt"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
-    t.string   "remember_me_token"
-    t.datetime "remember_me_token_expires_at"
-  end
-
-  add_index "users", ["remember_me_token"], :name => "index_users_on_remember_me_token"
 
 end
