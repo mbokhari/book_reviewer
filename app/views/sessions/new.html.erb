@@ -1,4 +1,11 @@
 <div class="right">
+	
+	<div class = "validationErrors">
+		<% if flash[:alert]%>
+	 		<%= flash[:alert] %> 
+		<%end%> 
+	</div>
+	
 	<%= form_tag sessions_path do %>
 	  <div class="field">
 	    <%= label_tag :username %>

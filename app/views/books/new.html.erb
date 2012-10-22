@@ -4,7 +4,7 @@
 <div class="right">
 <% if @book.errors.any? %>
   <% @book.errors.full_messages.each do |message| %>
-    <li class="validation_errors"><%= message %></li>
+    <li class="validationErrors"><%= message %></li>
   <% end %>
 <% end %>
 

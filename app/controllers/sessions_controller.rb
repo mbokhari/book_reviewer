@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   
-  skip_before_filter :require_login, :except  => [:destroy]
+  skip_before_filter :require_login
   
   def new
   end
@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if user
       redirect_back_or_to root_url, :notice => "Logged in!"
     else
-      flash.now.alert = "Email or password was invalid"
+      flash.now[:alert] = "Email or password was invalid"
       render :new
     end
   end
