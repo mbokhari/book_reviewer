@@ -1,5 +1,7 @@
 class BooksController < ApplicationController
   
+  skip_before_filter :require_login, :only => [:index, :show]
+  
   def index
     @books = Book.find(:all)
   end

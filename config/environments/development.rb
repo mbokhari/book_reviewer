@@ -15,6 +15,19 @@ BookReviewer::Application.configure do
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = true
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_charset = "utf8"
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings = {
+       :authentication => :plain,
+       :address => "smtp.mailgun.org",
+       :port => 587,
+       :domain => "book-reviewer.mailgun.org",
+       :user_name => "postmaster@book-reviewer.mailgun.org",
+       :password => "05511phyewm0"
+  }
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log

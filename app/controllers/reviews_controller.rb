@@ -1,4 +1,7 @@
 class ReviewsController < ApplicationController
+  
+  skip_before_filter :require_login, :except => [:destroy]
+  
   def index
     @book = Book.find(params[:book_id])
     @reviews = Review.find(:all)

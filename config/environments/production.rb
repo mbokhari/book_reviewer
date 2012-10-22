@@ -50,6 +50,18 @@ BookReviewer::Application.configure do
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_charset = "utf8"
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.smtp_settings = {
+       :authentication => :plain,
+       :address => "smtp.mailgun.org",
+       :port => 587,
+       :domain => "book-reviewer.mailgun.org",
+       :user_name => "postmaster@book-reviewer.mailgun.org",
+       :password => "05511phyewm0"
+  }
 
   # Enable threaded mode
   # config.threadsafe!
