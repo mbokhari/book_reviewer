@@ -5,11 +5,11 @@ require File.expand_path('../application', __FILE__)
 BookReviewer::Application.initialize!
 
 ActionMailer::Base.smtp_settings = {
-  :user_name => "app8245442@heroku.com",
-  :password => "Your Password",
-  :domain => "smtp.sendgrid.net",
-  :address => "smtp.sendgrid.net",
+  :user_name => "postmaster@book-reviewer.mailgun.org",
+  :password => "05511phyewm0",
+  :domain => "book-reviewer.mailgun.org",
+  :address => "smtp.mailgun.org",
   :port => 587,
-  :authentication => :login,
+  :authentication => :plain,
   :enable_starttls_auto => true
 }
